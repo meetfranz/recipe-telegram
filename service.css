@@ -11,7 +11,7 @@
 }
 
 .im_history_col_wrap {
-  width: calc(100% - 320px) !important;
+  width: 100% !important;
 }
 
 .im_message_wrap {
