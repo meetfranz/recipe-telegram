@@ -2,14 +2,15 @@ const path = require('path');
 
 module.exports = (Franz) => {
   const getMessages = function getMessages() {
-    const search = document.querySelector('.im_dialogs_search_field').value;
-
     let count = 0;
-    if (search === '') {
+    const searchElement = document.querySelector('.im_dialogs_search_field');
+    if (searchElement && searchElement.value === '') {
       const elements = document.querySelectorAll('.im_dialog_badge:not(.ng-hide)');
-      for (let i = 0; i < elements.length; i += 1) {
-        if (elements[i].innerHTML !== 0) {
-          count += 1;
+      if (elements) {
+        for (let i = 0; i < elements.length; i += 1) {
+          if (elements[i].innerHTML !== 0) {
+            count += 1;
+          }
         }
       }
     }
