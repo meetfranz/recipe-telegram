@@ -1,134 +1,141 @@
-body, .im_page_wrap {
-    background: black !important;
-    color: white !important;
-    border: none !important;
+body,
+.im_page_wrap {
+  background: black !important;
+  color: white !important;
+  border: none !important;
 }
 
 .tg_head_split {
-    background: black !important;
+  background: black !important;
 }
 
 .im_bottom_panel_wrap {
-    background: black !important;
-    color: white !important;
+  background: black !important;
+  color: white !important;
 }
 
 .im_dialogs_search .im_dialogs_search_field {
-    background: rgb(34,48,63) !important;
-    color: white !important;
+  background: rgb(34, 48, 63) !important;
+  color: white !important;
 }
 
 .icon-search-clear {
-    color: white !important;
+  color: white !important;
 }
 
 .im_record_bg {
-    background: black !important;
+  background: black !important;
 }
 
 .im_message_outer_wrap:hover {
-    background: rgba(128, 128, 128, 0.1) !important;
+  background: rgba(128, 128, 128, 0.1) !important;
 }
 
 .im_bottom_panel_wrap .im_message_outer_wrap {
-    background: black !important;
+  background: black !important;
 }
 
 .im_message_unread_split {
-    background: black !important;
+  background: black !important;
 }
 
 .im_history_selectable .im_message_outer_wrap {
-    background: black !important;
+  background: black !important;
 }
 
 .im_service_message {
-    background: black !important;
+  background: black !important;
 }
 
 .im_history_typing_wrap {
-    background: black !important;
+  background: black !important;
 }
 
 .im_history_messages_peer {
-    background: black !important;
+  background: black !important;
 }
 
 .im_dialogs_col_wrap noselect {
-    background: gray !important;
+  background: gray !important;
 }
 
 .page_wrap {
-    background: black !important;
+  background: black !important;
 }
 
-.im_history_empty.vertical-aligned, .im_history_not_selected.vertical-aligned {
-    background: black !important;
-    color: white !important
+.im_history_empty.vertical-aligned,
+.im_history_not_selected.vertical-aligned {
+  background: black !important;
+  color: white !important
 }
 
 .im_dialogs_col_wrap {
-    background: black !important;
-    border-right-color: grey !important;
+  background: black !important;
+  border-right-color: grey !important;
 }
 
 .im_dialog_peer {
-    color: #ededed !important;
+  color: #ededed !important;
 }
 
-.im_dialogs_scrollable_wrap a.im_dialog:hover, .im_dialogs_scrollable_wrap a.im_dialog_selected {
-    background: rgba(128, 128, 128, 0.2) !important;
-    color: white;
-    transition: width 2s;
+.im_dialogs_scrollable_wrap a.im_dialog:hover,
+.im_dialogs_scrollable_wrap a.im_dialog_selected {
+  background: rgba(128, 128, 128, 0.2) !important;
+  color: white;
+  transition: width 2s;
 }
 
-a.im_dialog:hover .im_short_message_text, a.im_dialog_selected .im_short_message_text {
-    color: white !important;
+a.im_dialog:hover .im_short_message_text,
+a.im_dialog_selected .im_short_message_text {
+  color: white !important;
 }
 
-a.im_dialog .im_dialog_chat_from_wrap, a.im_dialog .im_short_message_media, a.im_dialog .im_short_message_service {
-    color: white !important;
+a.im_dialog .im_dialog_chat_from_wrap,
+a.im_dialog .im_short_message_media,
+a.im_dialog .im_short_message_service {
+  color: white !important;
 }
 
 .dropdown-menu {
-    background: black !important;
-    border: none !important;
+  background: black !important;
+  border: none !important;
 }
 
-.dropdown-menu > li > a {
-    background: black !important;
-    color: white !important
+.dropdown-menu>li>a {
+  background: black !important;
+  color: white !important
 }
 
 .dropdown-menu li a:hover {
-    background: rgba(128, 128, 128, 0.1) !important;
-    color: white !important
+  background: rgba(128, 128, 128, 0.1) !important;
+  color: white !important
 }
 
 .md_modal_sections {
-    background: black !important;
+  background: black !important;
 }
 
 .tg_checkbox_label {
-    color: white !important
+  color: white !important
 }
 
 .md_modal_iconed_section_wrap.md_modal_iconed_section_peers {
-    background: black !important
+  background: black !important
 }
 
 .im_dialog_badge_muted {
-    background: rgba(128, 128, 128, 0.7) !important
+  background: rgba(128, 128, 128, 0.7) !important
 }
 
-.md_simple_modal_footer, .md_simple_modal_body {
-    background: black !important
+.md_simple_modal_footer,
+.md_simple_modal_body {
+  background: black !important
 }
 
 .im_bot_intro_message_wrap {
-    background: #373737 !important
+  background: #373737 !important
 }
 
-.im_dialogs_col .nano > .nano-pane > .nano-slider {
-    background: #2a2a2a !important
+.im_dialogs_col .nano>.nano-pane>.nano-slider {
+  background: #2a2a2a !important
 }
