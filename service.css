@@ -8,13 +8,33 @@
   max-width: 100% !important;
 }
 
+/* These hard limits cause trouble if Franz's width is low, and the app asks to switch to Mobile mode. */
+/* Anyway, when Franz is wide, the default values seem to make good use of screen space: 31% | 69% */
+/*
 .im_dialogs_col_wrap {
   width: 320px !important;
 }
-
 .im_history_col_wrap {
   width: calc(100% - 320px) !important;
 }
+*/
+
+/* This doesn't work either (it limits the left column when the width is low) */
+/*
+.im_dialogs_col_wrap {
+  max-width: 500px !important;
+}
+.im_history_col_wrap {
+  min-width: calc(100% - 500px) !important;
+}
+*/
+
+/* If you think the app looks silly when it gets too wide, we could limit the entire app (without breaking the mobile view) like this: */
+/*
+.im_page_wrap {
+  max-width: 1200px !important;
+}
+*/
 
 .im_message_wrap {
   max-width: inherit !important;
