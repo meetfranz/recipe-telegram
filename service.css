@@ -150,6 +150,17 @@ div.im_message_body {
   background: linear-gradient(30deg, #79af7d, #d0e8b0);
 }
 
+/* Flower background */
+.im_history_wrap, .im_history_not_selected_wrap {
+  /* Labeled for reuse, according to Google.  Source: https://pixabay.com/photos/daisy-green-flower-nature-2410163/ */
+  /* background: url(https://cdn.pixabay.com/photo/2017/06/16/19/43/daisy-2410163_960_720.jpg), linear-gradient(20deg, #375c3acc, #e8e3b0e6); */
+  /* background: url(https://cdn.pixabay.com/photo/2017/06/16/19/43/daisy-2410163_960_720.jpg), linear-gradient(20deg, #53a2ac80, #f5eea3cc); */
+  background: url(https://cdn.pixabay.com/photo/2017/06/16/19/43/daisy-2410163_960_720.jpg), linear-gradient(20deg, #53a2ac80, #f0e3a8e6);
+  background-size: cover;
+  /* background-filter: blur(0px) contrast(50%) brightness(140%); */
+  background-blend-mode: screen;
+}
+
 .im_message_unread_split {
   background: none;
 }
