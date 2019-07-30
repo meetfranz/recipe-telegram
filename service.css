@@ -221,10 +221,20 @@ a.btn-primary {
   background-color: #c9e0f4 !important;
 }
 
-code {
-  color: #4f9c70 !important;
+/* For code blocks (pre) and inline code (code) */
+pre, code {
+  /* border: 1px solid #bbb3 !important; */
+  border: none !important;
   background-color: #0001 !important;
   font-size: 100% !important;
+  color: #4f9c70 !important;
+}
+/* But Telegram puts <code> elements inside <pre> elements.  We don't want to repeat the styling for those deep <code> elements. */
+pre code {
+  border: initial !important;
+  background-color: initial !important;
+  font-size: inherit !important;
+  color: inherit !important;
 }
 
 /* Scrollbar and slider */

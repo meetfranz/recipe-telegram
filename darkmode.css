@@ -187,9 +187,9 @@ div.im_message_body {
   background-color: #357bae !important;
 }
 
-code {
-  color: #b7d7f5 !important;
+pre, code {
   background-color: #0002 !important;
+  color: #b7d7f5 !important;
 }
 
 .im_bottom_panel_wrap {
