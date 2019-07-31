@@ -182,6 +182,9 @@ div.im_message_body {
   background-color: #fff !important;
   /* Although hardly visible, this border helps to separate bubbles from the background image, when colours are similar */
   /* border: 1px solid #0001; */
+  /* border-top: 1px solid #fff1; */
+  /* box-shadow: 0 1px 1px 1px #0002; */
+  box-shadow: 0 1px 5px #0002;
   /* Since we added a border, reduce the margin */
   padding: 4px 12px !important;
 }
