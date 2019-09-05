@@ -248,14 +248,24 @@ pre code {
 .sessions_modal_col .nano>.nano-pane,
 .stickerset_modal_col .nano>.nano-pane,
 .im_dialogs_modal_col .nano>.nano-pane {
-  background: #aaa3 !important;
+  background: #7773 !important;
 }
 .im_history_col .nano>.nano-pane>.nano-slider,
 .contacts_modal_col .nano>.nano-pane>.nano-slider,
 .sessions_modal_col .nano>.nano-pane>.nano-slider,
 .stickerset_modal_col .nano>.nano-pane>.nano-slider,
 .im_dialogs_modal_col .nano>.nano-pane>.nano-slider {
-  background: #aaa5 !important;
+  background: #7778 !important;
+}
+.im_history_col .nano > .nano-pane {
+  /* Before this the scrollbar had a 10px gap at the top, and 0px at the bottom */
+  transform: translate(0, -5px);
+}
+.nano-pane {
+  border-radius: 100px !important;
+}
+.nano-slider {
+  border-radius: 100px !important;
 }
 
 /* Header */
