@@ -174,15 +174,15 @@ div.im_message_body {
 }
 
 /* Selected message(s) */
-.im_message_selected .im_message_outer_wrap {
-  background: #f2f6fa22 !important;
-}
-
-.im_message_selected .im_message_outer_wrap:hover,
 .im_history_select_active .im_message_outer_wrap:hover {
+  background-color: #f2f6fa22 !important;
+}
+.im_message_selected .im_message_outer_wrap {
   background-color: #f2f6fa44 !important;
 }
-
+.im_message_selected .im_message_outer_wrap:hover {
+  background-color: #f2f6fa55 !important;
+}
 .im_message_selected .im_message_outer_wrap .im_message_body {
   background-color: #357bae !important;
 }

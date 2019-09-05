@@ -213,12 +213,14 @@ a.btn-primary {
 }
 
 /* Selected message(s) */
-.im_message_selected .im_message_outer_wrap {
-  background: #f2f6fa44 !important;
-}
-.im_message_selected .im_message_outer_wrap:hover,
 .im_history_select_active .im_message_outer_wrap:hover {
+  background-color: #f2f6fa44 !important;
+}
+.im_message_selected .im_message_outer_wrap {
   background-color: #f2f6fa88 !important;
+}
+.im_message_selected .im_message_outer_wrap:hover {
+  background-color: #f2f6faaa !important;
 }
 .im_message_selected .im_message_outer_wrap .im_message_body {
   background-color: #c9e0f4 !important;
