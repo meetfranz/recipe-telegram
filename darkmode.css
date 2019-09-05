@@ -196,6 +196,11 @@ pre, code {
   background-color: #182531 !important;
 }
 
+/* The Cancel button after selecting some messages */
+.btn-md:hover {
+  background: #203041 !important;
+}
+
 /* Sidebar */
 .im_dialogs_col_wrap {
   background: #182531 !important;
