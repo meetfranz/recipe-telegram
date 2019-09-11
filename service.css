@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,700&display=swap');
+
 .tg_head_split {
   max-width: 100% !important;
 }
@@ -6,13 +8,33 @@
   max-width: 100% !important;
 }
 
+/* These hard limits cause trouble if Franz's width is low, and the app asks to switch to Mobile mode. */
+/* Anyway, when Franz is wide, the default values seem to make good use of screen space: 31% | 69% */
+/*
 .im_dialogs_col_wrap {
   width: 320px !important;
 }
-
 .im_history_col_wrap {
   width: calc(100% - 320px) !important;
 }
+*/
+
+/* This doesn't work either (it limits the left column when the width is low) */
+/*
+.im_dialogs_col_wrap {
+  max-width: 500px !important;
+}
+.im_history_col_wrap {
+  min-width: calc(100% - 500px) !important;
+}
+*/
+
+/* If you think the app looks silly when it gets too wide, we could limit the entire app (without breaking the mobile view) like this: */
+/*
+.im_page_wrap {
+  max-width: 1200px !important;
+}
+*/
 
 .im_message_wrap {
   max-width: inherit !important;
@@ -22,130 +44,336 @@
   max-width: 580px !important;
 }
 
-body.darkTheme,
-.darkTheme .modal-content {
-    color: #bbb !important;
-    background: #252525 !important;
+/* Leave enough space for the user avatar and the timestamp, and the potential text "edited" */
+.im_message_body {
+  max-width: calc(100% - 170px) !important;
 }
-.darkTheme a.tg_checkbox {
-    color: #bbb !important;
+/* Outgoing grouped messages don't have an avatar, so they can be wider */
+/* But incoming grouped messages cannot, because they still use the space of the avatar */
+.im_grouped .im_message_out .im_message_body,
+.im_grouped_short .im_message_out .im_message_body {
+  max-width: calc(100% - 90px) !important;
 }
-.darkTheme .im_page_wrap {
-    /*background color of contentwrapper under header*/
 
-    background-color: #303030 !important;
-    border-left: 1px solid #4d4d4d !important;
-    border-right: 1px solid #4d4d4d !important;
-    border-bottom: 1px solid #4d4d4d !important;
-    box-shadow: none;
-}
-.darkTheme .im_message_body,
-.darkTheme .im_attach,
-.darkTheme .im_media_attach,
-.darkTheme .im_record,
-.darkTheme .im_message_document_thumbed {
-    background: inherit !important;
-}
-.darkTheme .im_dialog_peer {
-    /*peer nickname unselected*/
 
-    color: #bbb !important;
-}
-.darkTheme .contacts_modal_members_list a.contacts_modal_contact {
-    /*nicknames in contactlist via hamburger menu*/
+/* === Improve layout === */
 
-    color: #bbb;
+/* Telegram for desktop has a slighly larger font */
+body {
+  font-size: 13px;
 }
-.darkTheme .active a.im_dialog {
-    /*selected peer */
 
-    background-color: #4d4d4d !important;
+/* Bubbles for chat messages */
+div.im_message_body {
+  background-color: #fff !important;
 }
-.darkTheme .tg_head_split,
-.darkTheme .md_modal_head {
-    /*page header block*/
 
-    background-color: #4d4d4d !important;
+/* Bubbles for chat messages */
+div.im_message_body {
+  border-radius: 8px;
+  padding: 6px 12px;
 }
-.darkTheme .dropdown.open .tg_head_btn,
-.darkTheme .tg_head_btn:hover {
-    background: #4d4d4d !important;
-}
-.darkTheme .form-control {
-    /*input field*/
 
-    background-color: #0e0e0e !important;
-    color: #bbb !important;
+/* This moves everything over to the right, but the date now appears in the wrong place (between the author and the body) */
+.im_message_out {
+  display: flex;
+  justify-content: flex-end;
 }
-.darkTheme .composer_rich_textarea {
-    background: #303030 !important;
-    border-color: #bbb !important;
+.im_message_out .im_message_meta {
+  position: absolute;
+  left: 15px;
 }
-.darkTheme .im_dialogs_col_wrap {
-    /*contactlist right border*/
+.im_message_in {
+  display: flex;
+  justify-content: flex-start;
+}
+.im_message_in .im_message_meta {
+  position: absolute;
+  right: 30px;
+}
 
-    border-right: 2px solid #4d4d4d;
+/* Bring related chat messages closer together */
+.im_content_message_wrap {
+  margin: 7px 10px 1.5px 16px !important;
 }
-.darkTheme .im_dialogs_col .nano > .nano-pane > .nano-slider {
-    /*scrollbarbutton when hover*/
+.im_grouped .im_content_message_wrap,
+.im_grouped_short .im_content_message_wrap {
+  margin: 1.5px 10px 1.5px 16px !important;
+}
 
-    background-color: #4d4d4d !important;
+/* With our new layout there is no space for the checkboxes, and we don't really need them anyway */
+.im_content_message_wrap .icon-select-tick {
+  display: none !important;
 }
-.darkTheme .tg_head_split {
-    background-color: #151515;
-}
-.darkTheme .im_submit {
-    color: #4d4d4d;
-}
-.darkTheme .im_message_mymention {
-    background: #1d1d1d;
-}
-.darkTheme .im_message_focus .im_message_outer_wrap {
-    background-color: #4d4d4d;
-}
-.darkTheme .im_message_selected .im_message_outer_wrap {
-    background: #4d4d4d;
-}
-.darkTheme a:hover {
-    background-color: #282828 !important;
-}
-.darkTheme .im_message_unread_split {
-    background: #4d4d4d;
-}
-@keyframes im_message_focus_fade {
-    0% {
-        background-color: #2d2d2d;
-    }
-}
-.darkTheme .btn-primary {
-    background-color: #4d4d4d;
-}
-.darkTheme .im_history_select_active .im_message_outer_wrap:hover {
-    background: #4d4d4d;
-}
-.darkTheme .im_dialog_chat_from_wrap,
-.darkTheme .im_dialog_message_service {
-    color: #6ac;
-}
-.darkTheme .composer_rich_textarea,
-.darkTheme .composer_textarea {
-    box-shadow: 0px 3px 1px #ddd;
-}
-.darkTheme .composer_rich_textarea:focus {
-    box-shadow: 0px 3px 1px #ddd !important;
-}
-.darkTheme .tg_head_logo_dropdown .dropdown-menu > li > a {
-    color: #ddd;
-}
-.darkTheme .btn-primary.disabled,
-.darkTheme .btn-primary[disabled] {
-    background: #4d4d4d none repeat scroll 0% 0%;
-}
-/*emoji*/
 
-.darkTheme .composer_emoji_tooltip,
-.darkTheme .icon-tooltip-tail,
-.darkTheme .dropdown-menu {
-    background-color: #4d4d4d !important;
-    border-color: #5d5d5d;
+/* Round edges on the input boxes */
+.im_dialogs_search .im_dialogs_search_field,
+.composer_rich_textarea,
+.composer_rich_textarea:focus {
+  border-radius: 12px !important;
+}
+
+.composer_rich_textarea,
+.composer_rich_textarea:focus {
+  padding: 8px 12px !important;
+  box-shadow: none !important;
+}
+
+/* Move the emoji icon in a bit, to fit with the rounded edges */
+.composer_emoji_insert_btn {
+  right: 5px;
+  top: 3px;
+}
+
+/* Wider edit box */
+.im_send_panel_wrap {
+  max-width: 1054px !important;
+  max-width: calc(100%) !important;
+}
+
+.im_send_form {
+  max-width: 882px !important;
+  max-width: calc(100% - 172px) !important;
+}
+
+/* Move the unread message marker (a dot) outside the chat bubble */
+/* TODO WIP: But we don't want to do that on mobile version! */
+.icon-message-status {
+  margin-left: 17px !important;
+}
+
+
+/* === Use colours more like the desktop app === */
+
+/* Green background */
+.im_history_wrap {
+  background: linear-gradient(30deg, #79af7d, #d0e8b0);
+}
+
+/* Flower background */
+.im_history_wrap, .im_history_not_selected_wrap {
+  /* Labeled for reuse, according to Google.  Source: https://pixabay.com/photos/daisy-green-flower-nature-2410163/ */
+  /* background: url(https://cdn.pixabay.com/photo/2017/06/16/19/43/daisy-2410163_960_720.jpg), linear-gradient(20deg, #375c3acc, #e8e3b0e6); */
+  /* background: url(https://cdn.pixabay.com/photo/2017/06/16/19/43/daisy-2410163_960_720.jpg), linear-gradient(20deg, #53a2ac80, #f5eea3cc); */
+  background: url(https://cdn.pixabay.com/photo/2017/06/16/19/43/daisy-2410163_960_720.jpg), linear-gradient(20deg, #53a2ac80, #f0e3a8e6);
+  background-size: cover;
+  /* background-filter: blur(0px) contrast(50%) brightness(140%); */
+  background-blend-mode: screen;
+}
+
+.im_message_unread_split {
+  background: none;
+}
+
+/* Timestamps and other text against green background */
+.im_message_date,
+.im_message_fwd_date,
+.im_service_message,
+.im_message_unread_split,
+.im_message_selected .im_message_date,
+.im_history_empty,
+.im_history_not_selected,
+.im_history_typing {
+  color: #fff !important;
+}
+
+/* Bubbles for chat messages */
+div.im_message_body {
+  background-color: #fff !important;
+  /* Although hardly visible, this border helps to separate bubbles from the background image, when colours are similar */
+  /* border: 1px solid #0001; */
+  /* border-top: 1px solid #fff1; */
+  /* box-shadow: 0 1px 1px 1px #0002; */
+  box-shadow: 0 1px 5px #0002;
+  /* Since we added a border, reduce the margin */
+  padding: 4px 12px !important;
+}
+
+/* Links in general, links inside messages, usernames */
+a,
+.im_message_body a,
+body .im_message_reply_author,
+.im_history_typing a.im_history_typing_author {
+  color: #53a9df !important;
+}
+
+/* Changing the link colour changed the button text, so we change it back to white. */
+a.btn-primary {
+  color: #fff !important;
+}
+
+/* User's own messages are a different colour */
+.im_message_out .im_message_body {
+  background-color: #f1fde2 !important;
+}
+
+.im_message_author,
+.im_message_fwd_author {
+  color: #53a9df !important;
+}
+
+/* Selected message(s) */
+.im_history_select_active .im_message_outer_wrap:hover {
+  background-color: #f2f6fa44 !important;
+}
+.im_message_selected .im_message_outer_wrap {
+  background-color: #f2f6fa88 !important;
+}
+.im_message_selected .im_message_outer_wrap:hover {
+  background-color: #f2f6faaa !important;
+}
+.im_message_selected .im_message_outer_wrap .im_message_body {
+  background-color: #c9e0f4 !important;
+}
+
+/* For code blocks (pre) and inline code (code) */
+pre, code {
+  /* border: 1px solid #bbb3 !important; */
+  border: none !important;
+  background-color: #0001 !important;
+  font-size: 100% !important;
+  color: #4f9c70 !important;
+}
+/* But Telegram puts <code> elements inside <pre> elements.  We don't want to repeat the styling for those deep <code> elements. */
+pre code {
+  border: initial !important;
+  background-color: initial !important;
+  font-size: inherit !important;
+  color: inherit !important;
+}
+
+/* Scrollbar and slider */
+.im_history_col .nano>.nano-pane,
+.contacts_modal_col .nano>.nano-pane,
+.sessions_modal_col .nano>.nano-pane,
+.stickerset_modal_col .nano>.nano-pane,
+.im_dialogs_modal_col .nano>.nano-pane {
+  background: #7773 !important;
+}
+.im_history_col .nano>.nano-pane>.nano-slider,
+.contacts_modal_col .nano>.nano-pane>.nano-slider,
+.sessions_modal_col .nano>.nano-pane>.nano-slider,
+.stickerset_modal_col .nano>.nano-pane>.nano-slider,
+.im_dialogs_modal_col .nano>.nano-pane>.nano-slider {
+  background: #7778 !important;
+}
+.im_history_col .nano > .nano-pane {
+  /* Before this the scrollbar had a 10px gap at the top, and 0px at the bottom */
+  transform: translate(0, -5px);
+}
+.nano-pane {
+  border-radius: 100px !important;
+}
+.nano-slider {
+  border-radius: 100px !important;
+}
+
+/* Header */
+.tg_head_split {
+  background-color: #53a9df !important;
+}
+.tg_head_btn {
+  color: #fffa !important;
+}
+
+/* Sidebar: Selected conversation highlight */
+.im_dialogs_scrollable_wrap .active a.im_dialog {
+  background-color: #53a9df !important;
+}
+
+/* Sidebar: Preview text is a bit thinner */
+.im_dialog_message {
+  /* font-weight: 300; */
+}
+/* Preview text is a bit lighter than 'grey' */
+a.im_dialog .im_short_message_text {
+  /* Note: Do not make this !important, or it will override the .active version */
+  /* color: #b2b2b2; */
+  color: #bbbbbb;
+}
+
+/* Sidebar: The "Draft" marker text */
+.im_dialog_draft_from {
+  color: #e15541 !important;
+}
+.active .im_dialog_draft_from {
+  color: #cde5f8 !important;
+}
+
+/* Emphasised text */
+a.im_dialog .im_dialog_chat_from_wrap, a.im_dialog .im_short_message_media, a.im_dialog .im_short_message_service {
+  color: #2894d7 !important;
+}
+/* But if the conversation is selected, do not use colour to emphasise */
+.active a.im_dialog .im_dialog_chat_from_wrap, .active a.im_dialog .im_short_message_media, .active a.im_dialog .im_short_message_service {
+    color: white !important;
+}
+/* The Telegram app does not use a special highlight for a mention */
+/* Even if we allow the light yellow for light mode, we should not use it for dark mode */
+.im_message_mymention {
+  background: none !important;
+}
+
+/* Input boxes */
+.im_dialogs_search .im_dialogs_search_field,
+.composer_rich_textarea,
+.composer_rich_textarea:focus {
+  border: 1px solid #8888 !important;
+  /* Use the same font size as the chat text */
+  font-size: 13px;
+}
+
+/* Instead of a right border on the sidebar, put a left border just on the bottom panel */
+.im_dialogs_col_wrap {
+  border-right: 0 !important;
+}
+.im_bottom_panel_wrap {
+  border-left: 1px solid #8883 !important;
+}
+
+/* Optional: It's nice to put a transparent dark box behind some of white text on the green background. */
+.im_message_date,
+.im_message_fwd_date,
+.im_history_typing,
+.im_message_unread_split,
+.im_message_selected .im_message_date,
+.im_history_empty {
+  /* background: #5a815133 !important; */
+  background: #5a815133 !important;
+}
+.im_service_message,
+.im_history_not_selected {
+  background: #5a815188 !important;
+}
+/* Those which are not full width look better with rounded corner */
+.im_message_date,
+.im_message_fwd_date,
+.im_history_not_selected,
+.im_history_typing {
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+}
+.im_history_not_selected {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Some have unequal padding, which we convert to margin */
+.im_message_date,
+.im_message_fwd_date {
+  margin: 0 0 20px 10px !important;
+}
+.im_page_peer_not_selected .im_history_not_selected_wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.im_service_message {
+  display: inline-block;
+}
+.im_history_typing .im_history_typing_author,
+.im_service_message .im_message_author,
+.im_service_message a {
+  color: #fff !important;
+  font-weight: normal !important;
 }

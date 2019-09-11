@@ -1,0 +1,257 @@
+body,
+.im_page_wrap {
+  background: black !important;
+  color: white !important;
+  border: none !important;
+}
+
+.tg_head_split {
+  background: black !important;
+}
+
+.im_bottom_panel_wrap {
+  background: black !important;
+  color: white !important;
+}
+
+.im_dialogs_search .im_dialogs_search_field {
+  background: rgb(34, 48, 63) !important;
+  color: white !important;
+}
+
+.icon-search-clear {
+  color: white !important;
+}
+
+.im_record_bg {
+  background: black !important;
+}
+
+.im_message_outer_wrap:hover {
+  background: rgba(128, 128, 128, 0.1) !important;
+}
+
+.im_bottom_panel_wrap .im_message_outer_wrap {
+  background: black !important;
+}
+
+.im_message_unread_split {
+  background: black !important;
+}
+
+.im_history_selectable .im_message_outer_wrap {
+  background: black !important;
+}
+
+.im_service_message {
+  background: black !important;
+}
+
+.im_history_typing_wrap {
+  background: black !important;
+}
+
+.im_history_messages_peer {
+  background: black !important;
+}
+
+.im_dialogs_col_wrap noselect {
+  background: gray !important;
+}
+
+.page_wrap {
+  background: black !important;
+}
+
+.im_history_empty.vertical-aligned,
+.im_history_not_selected.vertical-aligned {
+  color: white !important
+}
+
+.im_dialogs_col_wrap {
+  background: black !important;
+  border-right-color: grey !important;
+}
+
+.im_dialog_peer {
+  color: #ededed !important;
+}
+
+.im_dialogs_scrollable_wrap a.im_dialog:hover,
+.im_dialogs_scrollable_wrap a.im_dialog_selected {
+  background: rgba(128, 128, 128, 0.2) !important;
+  color: white;
+  transition: width 2s;
+}
+
+a.im_dialog:hover .im_short_message_text,
+a.im_dialog_selected .im_short_message_text {
+  color: white !important;
+}
+
+a.im_dialog .im_dialog_chat_from_wrap,
+a.im_dialog .im_short_message_media,
+a.im_dialog .im_short_message_service {
+  color: white !important;
+}
+
+.dropdown-menu {
+  background: black !important;
+  border: none !important;
+}
+
+.dropdown-menu>li>a {
+  background: black !important;
+  color: white !important
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(128, 128, 128, 0.1) !important;
+  color: white !important
+}
+
+.md_modal_sections {
+  background: black !important;
+}
+
+.tg_checkbox_label {
+  color: white !important
+}
+
+.md_modal_iconed_section_wrap.md_modal_iconed_section_peers {
+  background: black !important
+}
+
+.im_dialog_badge_muted {
+  background: rgba(128, 128, 128, 0.7) !important
+}
+
+.md_simple_modal_footer,
+.md_simple_modal_body {
+  background: black !important
+}
+
+.im_bot_intro_message_wrap {
+  background: #373737 !important
+}
+
+.im_dialogs_col .nano>.nano-pane>.nano-slider {
+  background: #2a2a2a !important
+}
+
+
+
+
+/* === Use colours more like the desktop app === */
+.page_wrap,
+.im_page_wrap,
+.im_history_wrap,
+.im_history_not_selected_wrap,
+.im_history_selectable .im_message_outer_wrap,
+.im_history_typing_wrap,
+.im_message_unread_split,
+.im_service_message,
+.im_history_messages_peer {
+  background: #0b1625 !important;
+}
+
+.im_dialogs_search .im_dialogs_search_field,
+.composer_rich_textarea,
+.composer_rich_textarea:focus {
+  background: #0b1625 !important;
+  /* border: none; */
+  border: 1px solid #8882 !important;
+}
+
+/* Bubbles for chat messages */
+div.im_message_body {
+  background-color: #19293a !important;
+}
+
+/* User's own messages are a different colour */
+.im_message_out .im_message_body {
+  background-color: #315c83 !important;
+}
+
+/* Selected message(s) */
+.im_history_select_active .im_message_outer_wrap:hover {
+  background-color: #f2f6fa22 !important;
+}
+.im_message_selected .im_message_outer_wrap {
+  background-color: #f2f6fa44 !important;
+}
+.im_message_selected .im_message_outer_wrap:hover {
+  background-color: #f2f6fa55 !important;
+}
+.im_message_selected .im_message_outer_wrap .im_message_body {
+  background-color: #357bae !important;
+}
+
+pre, code {
+  background-color: #0002 !important;
+  color: #b7d7f5 !important;
+}
+
+.im_bottom_panel_wrap {
+  background-color: #182531 !important;
+}
+
+/* The Cancel button after selecting some messages */
+.btn-md:hover {
+  background: #203041 !important;
+}
+
+/* Sidebar */
+.im_dialogs_col_wrap {
+  background: #182531 !important;
+  border-right: 0;
+}
+
+/* Sidebar: The "Draft" marker text */
+.im_dialog_draft_from {
+  color: #ff5d68 !important;
+}
+.active .im_dialog_draft_from {
+  color: #b2d0f2 !important;
+}
+
+/* Selected conversation highlight */
+.im_dialogs_scrollable_wrap .active a.im_dialog {
+  background-color: #315c83 !important;
+}
+
+/* Emphasised text */
+a.im_dialog .im_dialog_chat_from_wrap,
+a.im_dialog .im_short_message_media,
+a.im_dialog .im_short_message_service {
+  color: #53a9df !important;
+}
+
+/* Header */
+.tg_head_split {
+  background-color: #182531 !important;
+}
+
+.md_modal_sections {
+  background-color: #19293a !important;
+}
+
+/* Remove the white line between the content and the footer */
+.im_page_wrap {
+  box-shadow: none !important;
+}
+
+/* Optional: It's nice to put a transparent dark box behind some of white text on the green background. */
+/* In dark mode, these are the same as the bubble backgrounds */
+.im_message_date,
+.im_message_fwd_date,
+.im_history_typing,
+.im_message_unread_split,
+.im_message_selected .im_message_date,
+.im_history_empty {
+  background: none !important;
+}
+.im_service_message,
+.im_history_not_selected {
+  background: #19293a !important;
+}
