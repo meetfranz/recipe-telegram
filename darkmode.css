@@ -207,6 +207,14 @@ pre, code {
   border-right: 0;
 }
 
+/* Sidebar: The "Draft" marker text */
+.im_dialog_draft_from {
+  color: #ff5d68 !important;
+}
+.active .im_dialog_draft_from {
+  color: #b2d0f2 !important;
+}
+
 /* Selected conversation highlight */
 .im_dialogs_scrollable_wrap .active a.im_dialog {
   background-color: #315c83 !important;

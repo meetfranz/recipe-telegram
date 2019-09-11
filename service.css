@@ -292,6 +292,14 @@ a.im_dialog .im_short_message_text {
   color: #bbbbbb;
 }
 
+/* Sidebar: The "Draft" marker text */
+.im_dialog_draft_from {
+  color: #e15541 !important;
+}
+.active .im_dialog_draft_from {
+  color: #cde5f8 !important;
+}
+
 /* Emphasised text */
 a.im_dialog .im_dialog_chat_from_wrap, a.im_dialog .im_short_message_media, a.im_dialog .im_short_message_service {
   color: #2894d7 !important;
