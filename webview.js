@@ -1,20 +1,16 @@
 const path = require('path');
 
-module.exports = (Franz) => {
+module.exports = Franz => {
   const getMessages = function getMessages() {
+    const messages = document.querySelectorAll('li.rp:not(.is-muted)');  
     let count = 0;
-    const searchElement = document.querySelector('.im_dialogs_search_field');
-    if (searchElement && searchElement.value === '') {
-      const elements = document.querySelectorAll('.im_dialog_badge:not(.ng-hide):not(.im_dialog_badge_muted)');
-      if (elements) {
-        for (let i = 0; i < elements.length; i += 1) {
-          if (elements[i].innerHTML !== 0) {
-            count += 1;
-          }
-        }
-      }
-    }
-
+	  for (let i = 0; i < messages.length; i += 1) {
+	    const message = messages[i].querySelector('div.unread');
+	    if (!!message && message.innerHTML !== '') {
+		    count += 1;
+	    }
+	  }
+    
     Franz.setBadge(count);
   };
 
