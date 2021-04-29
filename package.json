@@ -7,7 +7,7 @@
   "author": "Stefan Malzner <stefan@adlk.io>",
   "license": "MIT",
   "config": {
-    "serviceURL": "https://web.telegram.org",
+    "serviceURL": "https://webk.telegram.org/",
     "hasDirectMessages": true,
     "hasNotificationSound": true
   }
